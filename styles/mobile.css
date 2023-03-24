@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+  /* Colors Pomodoro */
+  --bg-yellow: #fefcf2;
+  --container-yellow: #fdf5d7;
+  --select-yellow: #fbeaa9;
+  --principal-yellow: #897b46;
+  /* Colors Short Break  */
+  --bg-blue: #f8fbfb;
+  --container-blue: #e9f2f4;
+  --select-blue: #d0e2e7;
+  --principal-blue: #667578;
+  /* Colors Long Break */
+  --bg-green: #f7fcfa;
+  --container-green: #e7f4f1;
+  --select-green: #cce8e0;
+  --principal-green: #627a73;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+  color: var(--principal-yellow);
+  background: var(--bg-yellow);
+  font-size: 62.5%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__logo {
+  margin: 1.2rem;
+  display: flex;
+}
+.navbar__logo--img > path, .navbar__settings > path {
+  fill: var(--principal-yellow);
+}
+.navbar__logo--title {
+  align-self: center;
+  margin: 0 0 0 1rem;
+}
+.navbar__settings {
+  margin: 1.2rem;
+}
