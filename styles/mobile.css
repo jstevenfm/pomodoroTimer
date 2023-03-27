@@ -66,9 +66,9 @@ main {
 }
 .timer__status {
   background: var(--container-yellow);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   border-radius: 2.4rem;
   -webkit-border-radius: 2.4rem;
   -moz-border-radius: 2.4rem;
@@ -84,7 +84,8 @@ main {
   padding: 1.6rem 1rem;
   font-weight: 500;
   font-size: 1.6rem;
-  cursor: pointer;;
+  cursor: pointer;
+  text-align: center;
 }
 .timer__status > input:checked  + label {
   background: var(--select-yellow);
@@ -111,13 +112,18 @@ main {
   -ms-border-radius: 2.4rem;
   -o-border-radius: 2.4rem;
   padding: 0.8rem 2rem;
+  width: 70%;
+  max-width: 28rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 .timer__controls--icon > path {
   fill: var(--principal-yellow);
 }
-.play {
+/* .play {
   margin: 0 2rem;
-}
+} */
 
 .tasks {
   padding: 2rem;
@@ -179,7 +185,7 @@ main {
   margin: 2rem 0;
   color: var(--principal-yellow);
   width: 80%;
-  max-width: 920px;
+  max-width: 92rem;
 }
 .tasks__new-task--menu {
   margin: 2rem 1.2rem;
