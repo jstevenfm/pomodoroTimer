@@ -1,6 +1,12 @@
+.navbar {
+  max-width: 144rem;
+  margin: auto;
+}
 main {
   flex-direction: row-reverse;
   justify-content: space-evenly;
+  max-width: 144rem;
+  margin: auto;
 }
 .navbar__logo {
   padding: 2.4rem;
