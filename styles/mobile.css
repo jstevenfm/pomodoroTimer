@@ -81,7 +81,7 @@ main {
   display: none;
 }
 .timer__status > label {
-  padding: 1rem;
+  padding: 1.6rem 1rem;
   font-weight: 500;
   font-size: 1.6rem;
   cursor: pointer;;
@@ -178,7 +178,7 @@ main {
   outline: none;
   margin: 2rem 0;
   color: var(--principal-yellow);
-  width: 100%;
+  width: 80%;
   max-width: 920px;
 }
 .tasks__new-task--menu {
