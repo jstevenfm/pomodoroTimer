@@ -118,3 +118,66 @@ main {
 .play {
   margin: 0 2rem;
 }
+
+.tasks {
+  padding: 2rem;
+  background: var(--container-yellow);
+  box-shadow: var(--shadows);
+  border-radius: 2.4rem;
+  -webkit-border-radius: 2.4rem;
+  -moz-border-radius: 2.4rem;
+  -ms-border-radius: 2.4rem;
+  -o-border-radius: 2.4rem;
+}
+.tasks__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tasks__header--title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.tasks__header--icon > path {
+  fill: var(--principal-yellow);
+}
+
+.tasks__new-task {
+  margin: 2rem 0 0 0;
+  background: var(--select-yellow);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 1.2rem;
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  -ms-border-radius: 1.2rem;
+  -o-border-radius: 1.2rem;
+}
+.tasks__new-task--complete {
+  display: none;
+}
+.tasks__new-task--complete + label {
+  cursor: pointer;
+  margin: 2rem 0.8rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../assets/icons/Check.svg);
+}
+.tasks__new-task--complete:checked + label {
+  background-image: url(../assets/icons/Checked.svg);
+}
+.tasks__new-task--name {
+  background: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  outline: none;
+  margin: 2rem 0;
+  color: var(--principal-yellow);
+}
+.tasks__new-task--menu {
+  margin: 2rem 1rem;
+}
+.tasks__new-task--menu > path {
+  fill: var(--principal-yellow);
+}
