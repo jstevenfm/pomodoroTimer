@@ -146,19 +146,23 @@ main {
   margin: 2rem 0 0 0;
   background: var(--select-yellow);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   border-radius: 1.2rem;
   -webkit-border-radius: 1.2rem;
   -moz-border-radius: 1.2rem;
   -ms-border-radius: 1.2rem;
   -o-border-radius: 1.2rem;
 }
+.tasks__new-task > div {
+  display: flex;
+  width: 100%;
+}
 .tasks__new-task--complete {
   display: none;
 }
 .tasks__new-task--complete + label {
   cursor: pointer;
-  margin: 2rem 0.8rem;
+  margin: 2rem 1.2rem;
   width: 2rem;
   height: 2rem;
   background-image: url(../assets/icons/Check.svg);
@@ -174,9 +178,11 @@ main {
   outline: none;
   margin: 2rem 0;
   color: var(--principal-yellow);
+  width: 100%;
+  max-width: 920px;
 }
 .tasks__new-task--menu {
-  margin: 2rem 1rem;
+  margin: 2rem 1.2rem;
 }
 .tasks__new-task--menu > path {
   fill: var(--principal-yellow);
