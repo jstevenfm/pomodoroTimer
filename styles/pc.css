@@ -1,0 +1,15 @@
+main {
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+.navbar__logo {
+  padding: 2.4rem;
+}
+.navbar__settings {
+  margin: 2.4rem;
+}
+
+.timer, .tasks {
+  width: 45%;
+  margin: 6rem 0;
+}
