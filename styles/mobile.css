@@ -121,9 +121,6 @@ main {
 .timer__controls--icon > path {
   fill: var(--principal-yellow);
 }
-/* .play {
-  margin: 0 2rem;
-} */
 
 .tasks {
   padding: 2rem;
@@ -192,4 +189,94 @@ main {
 }
 .tasks__new-task--menu > path {
   fill: var(--principal-yellow);
+}
+
+/* SHORT BREAK */
+.bl-html {
+  color: var(--principal-blue);
+  background: var(--bg-blue);
+}
+
+.bl-navbar__logo--img > path, .bl-navbar__settings > path {
+  fill: var(--principal-blue);
+}
+
+.bl-timer__status {
+  background: var(--container-blue);
+}
+.bl-timer__status > input:checked  + label {
+  background: var(--select-blue);
+}
+.bl-timer__controls {
+  background: var(--container-blue);
+}
+.bl-timer__controls--icon > path {
+  fill: var(--principal-blue);
+}
+
+.bl-tasks {
+  background: var(--container-blue);
+}
+.bl-tasks__header--icon > path {
+  fill: var(--principal-blue);
+}
+.bl-tasks__new-task {
+  background: var(--select-blue);
+}
+.bl-tasks__new-task--complete + label {
+  background-image: url(../assets/icons/bl-Check.svg);
+}
+.bl-tasks__new-task--complete:checked + label {
+  background-image: url(../assets/icons/bl-Checked.svg);
+}
+.bl-tasks__new-task--name {
+  color: var(--principal-blue);
+}
+.bl-tasks__new-task--menu > path {
+  fill: var(--principal-blue);
+}
+
+/* LONG BREAK */
+.gr-html {
+  color: var(--principal-green);
+  background: var(--bg-green);
+}
+
+.gr-navbar__logo--img > path, .gr-navbar__settings > path {
+  fill: var(--principal-green);
+}
+
+.gr-timer__status {
+  background-color: var(--container-green);
+}
+.gr-timer__status > input:checked  + label {
+  background: var(--select-green);
+}
+.gr-timer__controls {
+  background: var(--container-green);
+}
+.gr-timer__controls--icon > path {
+  fill: var(--principal-green);
+}
+
+.gr-tasks {
+  background: var(--container-green);
+}
+.gr-tasks__header--icon > path {
+  fill: var(--principal-green);
+}
+.gr-tasks__new-task {
+  background: var(--select-green);
+}
+.gr-tasks__new-task--complete + label {
+  background-image: url(../assets/icons/gr-Check.svg);
+}
+.gr-tasks__new-task--complete:checked + label {
+  background-image: url(../assets/icons/gr-Checked.svg);
+}
+.gr-tasks__new-task--name {
+  color: var(--principal-green);
+}
+.gr-tasks__new-task--menu > path {
+  fill: var(--principal-green);
 }
