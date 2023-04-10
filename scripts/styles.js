@@ -9,6 +9,7 @@ const navbarSettings = document.querySelector('.navbar__settings');
 const timerStatus = document.querySelector('.timer__status');
 const timerControls = document.querySelector('.timer__controls');
 const timerControlsIcon = document.querySelector('.timer__controls--icon');
+const restart = document.querySelector('.restart');
 const play = document.querySelector('.play');
 const next = document.querySelector('.next');
 const tasks = document.querySelector('.tasks');
