@@ -40,6 +40,9 @@ function togglePomodoro() {
   tasksNewTaskComplete.classList.remove('bl-tasks__new-task--complete', 'gr-tasks__new-task--complete');
   tasksNewTaskName.classList.remove('bl-tasks__new-task--name', 'gr-tasks__new-task--name');
   tasksNewTaskMen.classList.remove('bl-tasks__new-task--menu', 'gr-tasks__new-task--menu');
+
+  minutes.textContent = 25;
+  seconds.textContent = `0${0}`;
 }
 function toggleShortBreak() {
   htmlBg.classList.add('bl-html');
@@ -70,6 +73,9 @@ function toggleShortBreak() {
   tasksNewTaskName.classList.remove('gr-tasks__new-task--name');
   tasksNewTaskMen.classList.add('bl-tasks__new-task--menu');
   tasksNewTaskMen.classList.remove('gr-tasks__new-task--menu');
+
+  minutes.textContent = `0${5}`;
+  seconds.textContent = `0${0}`;
 }
 function toggleLongBreak() {
   htmlBg.classList.add('gr-html');
@@ -100,4 +106,7 @@ function toggleLongBreak() {
   tasksNewTaskName.classList.remove('bl-tasks__new-task--name');
   tasksNewTaskMen.classList.add('gr-tasks__new-task--menu');
   tasksNewTaskMen.classList.remove('bl-tasks__new-task--menu');
+
+  minutes.textContent = 15;
+  seconds.textContent = `0${0}`;
 }

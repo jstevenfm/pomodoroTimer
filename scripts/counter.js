@@ -20,9 +20,9 @@ const toggleCount = () => {
       if (Number(seconds.textContent) <= 9) {
         seconds.textContent = `0${seconds.textContent}`;
       }
-      // if (Number(minutes.textContent) <= 9) {
-      //   minutes.textContent = `0${minutes.textContent}`;
-      // }
+      if (Number(minutes.textContent) <= 9) {
+        minutes.textContent = `0${minutes.textContent}`;
+      }
     }, 1000);
   }
 };
