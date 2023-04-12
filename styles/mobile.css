@@ -118,6 +118,9 @@ main {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
+.timer__controls--icon {
+  cursor: pointer;
+}
 .timer__controls--icon > path {
   fill: var(--principal-yellow);
 }
