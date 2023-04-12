@@ -35,6 +35,10 @@ main {
   display: flex;
   flex-direction: column;
 }
+a {
+  color: var(--principal-yellow);
+  text-decoration: none;
+}
 
 .navbar {
   display: flex;
