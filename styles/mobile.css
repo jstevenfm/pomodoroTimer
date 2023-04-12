@@ -36,7 +36,7 @@ main {
   flex-direction: column;
 }
 a {
-  color: var(--principal-yellow);
+  color: inherit;
   text-decoration: none;
 }
 
@@ -98,6 +98,11 @@ a {
   -moz-border-radius: 2.4rem;
   -ms-border-radius: 2.4rem;
   -o-border-radius: 2.4rem;
+  transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
 }
 
 .timer__counter {
