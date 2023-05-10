@@ -1,9 +1,25 @@
-const minutes = document.querySelector(".minutes");
-const seconds = document.querySelector(".seconds");
+let minutes = document.querySelector(".minutes");
+let seconds = document.querySelector(".seconds");
 let interval;
 
 const restartState = () => {
+  clearInterval(interval);
+  pause.classList.add("hide-timer__controls--icon");
+  play.classList.remove("hide-timer__controls--icon");
   console.log("count restart");
+
+  if (pomodoro.checked === true) {
+    minutes.textContent = 25;
+    seconds.textContent = `0${0}`;
+  }
+  if (shortBreak.checked === true) {
+    minutes.textContent = `0${5}`;
+    seconds.textContent = `0${0}`;
+  }
+  if (longBreak.checked === true) {
+    minutes.textContent = 15;
+    seconds.textContent = `0${0}`;
+  }
 };
 
 const playCount = () => {
@@ -21,31 +37,28 @@ const playCount = () => {
       if (Number(minutes.textContent) <= 9) {
         minutes.textContent = `0${Number(minutes.textContent)}`;
       }
-    }, 1000);
+    }, 10);
   }
   if (Number(minutes.textContent) < 0) {
     clearInterval(interval);
+    pause.classList.add("hide-timer__controls--icon");
+    play.classList.remove("hide-timer__controls--icon");
   }
-  play.classList.add('hide-timer__controls--icon');
-  pause.classList.remove('hide-timer__controls--icon');
+  play.classList.add("hide-timer__controls--icon");
+  pause.classList.remove("hide-timer__controls--icon");
 };
 
-
 const pauseCount = () => {
-  console.log("restart state");
   clearInterval(interval);
-  interval = null;
-  
-  pause.classList.add('hide-timer__controls--icon');
-  play.classList.remove('hide-timer__controls--icon');
+  pause.classList.add("hide-timer__controls--icon");
+  play.classList.remove("hide-timer__controls--icon");
 };
 
 const nextState = () => {
-  console.log("count stop");
+  console.log("next state");
 };
 
 restart.addEventListener("click", restartState);
 play.addEventListener("click", playCount);
 pause.addEventListener("click", pauseCount);
 next.addEventListener("click", nextState);
-
