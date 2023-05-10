@@ -134,6 +134,10 @@ a {
   fill: var(--principal-yellow);
 }
 
+.hide-timer__controls--icon {
+  display: none;
+}
+
 .tasks {
   padding: 2rem;
   background: var(--container-yellow);

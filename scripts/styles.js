@@ -11,6 +11,7 @@ const timerControls = document.querySelector('.timer__controls');
 const timerControlsIcon = document.querySelector('.timer__controls--icon');
 const restart = document.querySelector('.restart');
 const play = document.querySelector('.play');
+const pause = document.querySelector('.pause');
 const next = document.querySelector('.next');
 const tasks = document.querySelector('.tasks');
 const tasksHeaderIcon = document.querySelector('.tasks__header--icon');
@@ -33,6 +34,7 @@ function togglePomodoro() {
   timerControls.classList.remove('bl-timer__controls', 'gr-timer__controls');
   timerControlsIcon.classList.remove('bl-timer__controls--icon', 'gr-timer__controls--icon');
   play.classList.remove('bl-timer__controls--icon', 'gr-timer__controls--icon');
+  pause.classList.remove('bl-timer__controls--icon', 'gr-timer__controls--icon');
   next.classList.remove('bl-timer__controls--icon', 'gr-timer__controls--icon');
   tasks.classList.remove('bl-tasks', 'gr-tasks');
   tasksHeaderIcon.classList.remove('bl-tasks__header--icon', 'gr-tasks__header--icon');
@@ -59,6 +61,8 @@ function toggleShortBreak() {
   timerControlsIcon.classList.remove('gr-timer__controls--icon');
   play.classList.add('bl-timer__controls--icon');
   play.classList.remove('gr-timer__controls--icon');
+  pause.classList.add('bl-timer__controls--icon');
+  pause.classList.remove('gr-timer__controls--icon');
   next.classList.add('bl-timer__controls--icon');
   next.classList.remove('gr-timer__controls--icon');
   tasks.classList.add('bl-tasks');
@@ -92,6 +96,8 @@ function toggleLongBreak() {
   timerControlsIcon.classList.remove('bl-timer__controls--icon');
   play.classList.add('gr-timer__controls--icon');
   play.classList.remove('bl-timer__controls--icon');
+  pause.classList.add('gr-timer__controls--icon');
+  pause.classList.remove('bl-timer__controls--icon');
   next.classList.add('gr-timer__controls--icon');
   next.classList.remove('bl-timer__controls--icon');
   tasks.classList.add('gr-tasks');
