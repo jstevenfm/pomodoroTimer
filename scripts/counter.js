@@ -13,15 +13,16 @@ const toggleCount = () => {
   if (Number(minutes.textContent) >= 0) {
     interval = setInterval(() => {
       seconds.textContent = Number(seconds.textContent) - 1;
+
       if (Number(seconds.textContent) < 0) {
-        seconds.textContent = 12;
+        seconds.textContent = 59;
         minutes.textContent = Number(minutes.textContent) - 1;
       }
       if (Number(seconds.textContent) <= 9) {
-        seconds.textContent = `0${seconds.textContent}`;
+        seconds.textContent = `0${Number(seconds.textContent)}`;
       }
       if (Number(minutes.textContent) <= 9) {
-        minutes.textContent = `0${minutes.textContent}`;
+        minutes.textContent = `0${Number(minutes.textContent)}`;
       }
     }, 1000);
   }
@@ -34,3 +35,4 @@ const nextState = () => {
 restart.addEventListener("click", restartState);
 play.addEventListener("click", toggleCount);
 next.addEventListener("click", nextState);
+
