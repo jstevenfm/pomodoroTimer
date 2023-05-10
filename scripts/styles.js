@@ -45,6 +45,10 @@ function togglePomodoro() {
 
   minutes.textContent = 25;
   seconds.textContent = `0${0}`;
+
+  clearInterval(interval);
+  pause.classList.add('hide-timer__controls--icon');
+  play.classList.remove('hide-timer__controls--icon');
 }
 function toggleShortBreak() {
   htmlBg.classList.add('bl-html');
@@ -80,6 +84,10 @@ function toggleShortBreak() {
 
   minutes.textContent = `0${5}`;
   seconds.textContent = `0${0}`;
+
+  clearInterval(interval);
+  pause.classList.add('hide-timer__controls--icon');
+  play.classList.remove('hide-timer__controls--icon');
 }
 function toggleLongBreak() {
   htmlBg.classList.add('gr-html');
@@ -115,4 +123,8 @@ function toggleLongBreak() {
 
   minutes.textContent = 15;
   seconds.textContent = `0${0}`;
+
+  clearInterval(interval);
+  pause.classList.add('hide-timer__controls--icon');
+  play.classList.remove('hide-timer__controls--icon');
 }
