@@ -34,10 +34,13 @@ const playCount = () => {
       if (Number(seconds.textContent) <= 9) {
         seconds.textContent = `0${seconds.textContent}`;
       }
-      if (Number(minutes.textContent) <= 9) {
+      if (Number(minutes.textContent) <= 9 && Number(minutes.textContent) >= 0) {
         minutes.textContent = `0${Number(minutes.textContent)}`;
       }
-    }, 10);
+      if (Number(minutes.textContent) < 0) {
+        restartState();
+      }
+    }, 1000);
   }
   if (Number(minutes.textContent) < 0) {
     clearInterval(interval);
