@@ -61,7 +61,7 @@ const nextState = () => {
 
   if (pomodoro.checked === true) {
 
-    if (counterPomodoro >= 1 && counterPomodoro < 4) {
+    if (counterPomodoro < 4) {
       shortBreak.checked = true;
       toggleShortBreak();
     } 
