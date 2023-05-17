@@ -40,12 +40,7 @@ const playCount = () => {
       if (Number(minutes.textContent) < 0) {
         restartState();
       }
-    }, 1000);
-  }
-  if (Number(minutes.textContent) < 0) {
-    clearInterval(interval);
-    pause.classList.add("hide-timer__controls--icon");
-    play.classList.remove("hide-timer__controls--icon");
+    }, 10);
   }
   play.classList.add("hide-timer__controls--icon");
   pause.classList.remove("hide-timer__controls--icon");
