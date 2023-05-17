@@ -1,12 +1,13 @@
 let minutes = document.querySelector(".minutes");
 let seconds = document.querySelector(".seconds");
+
 let interval;
+let counterPomodoro = 0;
 
 const restartState = () => {
   clearInterval(interval);
   pause.classList.add("hide-timer__controls--icon");
   play.classList.remove("hide-timer__controls--icon");
-  console.log("count restart");
 
   if (pomodoro.checked === true) {
     minutes.textContent = 25;
@@ -39,8 +40,12 @@ const playCount = () => {
       }
       if (Number(minutes.textContent) < 0) {
         restartState();
+        if (pomodoro.checked === true) {
+          counterPomodoro++;
+        }
+        nextState();
       }
-    }, 10);
+    }, 1);
   }
   play.classList.add("hide-timer__controls--icon");
   pause.classList.remove("hide-timer__controls--icon");
@@ -53,7 +58,22 @@ const pauseCount = () => {
 };
 
 const nextState = () => {
-  console.log("next state");
+
+  if (pomodoro.checked === true) {
+
+    if (counterPomodoro >= 1 && counterPomodoro < 4) {
+      shortBreak.checked = true;
+      toggleShortBreak();
+    } 
+    if (counterPomodoro >= 4) {
+      longBreak.checked = true;
+      toggleLongBreak();
+      counterPomodoro = 0;
+    }
+  } else if (shortBreak.checked === true || longBreak.checked === true ) {
+    pomodoro.checked = true;
+    togglePomodoro();
+  }
 };
 
 restart.addEventListener("click", restartState);
