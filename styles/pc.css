@@ -18,4 +18,5 @@ main {
 .timer, .tasks {
   width: 45%;
   margin: 6rem 0;
+  align-self: flex-start;
 }
