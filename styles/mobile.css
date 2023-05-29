@@ -157,6 +157,12 @@ a {
   font-size: 2rem;
   font-weight: 500;
 }
+#add-task {
+  display: none;
+}
+.tasks__header--icon {
+  cursor: pointer;
+}
 .tasks__header--icon > path {
   fill: var(--principal-yellow);
 }
