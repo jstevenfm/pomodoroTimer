@@ -83,12 +83,13 @@ function createTaskNode() {
       labelMenuTasks.appendChild(svgMenuTask)
 
 
+    containerInputsMenu.appendChild(inputMenuTask)
+    containerInputsMenu.appendChild(labelMenuTasks)
 
 
   
   containerNewTask.appendChild(containerInputsTask)
-  containerNewTask.appendChild(inputMenuTask)
-  containerNewTask.appendChild(labelMenuTasks)
+  containerNewTask.appendChild(containerInputsMenu)
   return containerNewTask
 }
 tasks.appendChild(createTaskNode())

@@ -178,7 +178,8 @@ a {
   -ms-border-radius: 1.2rem;
   -o-border-radius: 1.2rem;
 }
-.tasks__new-task > div {
+/* .tasks__new-task--inputs  */
+.tasks__new-task > div{
   display: flex;
   width: 100%;
 }
@@ -206,8 +207,18 @@ a {
   width: 80%;
   max-width: 92rem;
 }
+#menu-task {
+  display: none;
+}
+/* #menu-task + label {
+  width: 100%;
+  height: 6rem;
+} */
 .tasks__new-task--menu {
   margin: 2rem 1.2rem;
+  cursor: pointer;
+  /* width: 0.6rem;
+  height: 2rem; */
 }
 .tasks__new-task--menu > path {
   fill: var(--principal-yellow);
