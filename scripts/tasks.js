@@ -35,13 +35,17 @@ function addTask() {
   const containerTasks = document.querySelector(".tasks");
   containerTasks.appendChild(taskNode);
 
-  // const btnRemoveTask = taskNode.querySelector(".tasks__new-task--btn-remove");
-  // btnRemoveTask.addEventListener('click', removeTask);
+  const btnRemoveTask = taskNode.querySelector(".tasks__new-task--btn-remove");
+  btnRemoveTask.addEventListener('click', removeTask);
 
   // const btnCompleteTask = taskNode.querySelector(".tasks__new-task--btn-complete");
   // btnCompleteTask.addEventListener('click', completeTask);
 
-  console.log('hola');
+}
+
+function removeTask() {
+  const taskNode = this.parentNode;
+  taskNode.remove();
 }
 
 function createTaskNode() {
