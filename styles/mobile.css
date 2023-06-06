@@ -183,17 +183,16 @@ a {
   display: flex;
   width: 100%;
 }
-.tasks__new-task--complete {
-  display: none;
-}
-.tasks__new-task--complete + label {
+.tasks__new-task--btn-complete {
   cursor: pointer;
   margin: 2rem 1.2rem;
   width: 2rem;
   height: 2rem;
+  background: none;
   background-image: url(../assets/icons/Check.svg);
+  border: none;
 }
-.tasks__new-task--complete:checked + label {
+.tasks__new-task--btn-completed {
   background-image: url(../assets/icons/Checked.svg);
 }
 .tasks__new-task--name {
@@ -207,20 +206,15 @@ a {
   width: 80%;
   max-width: 92rem;
 }
-#menu-task {
-  display: none;
+.tasks__new-task--btn-remove {
+  background: none;
+  border: none;
 }
-/* #menu-task + label {
-  width: 100%;
-  height: 6rem;
-} */
-.tasks__new-task--menu {
+.tasks__new-task--btn-remove--icon {
   margin: 2rem 1.2rem;
   cursor: pointer;
-  /* width: 0.6rem;
-  height: 2rem; */
 }
-.tasks__new-task--menu > path {
+.tasks__new-task--btn-remove--icon > path {
   fill: var(--principal-yellow);
 }
 
@@ -256,16 +250,16 @@ a {
 .bl-tasks__new-task {
   background: var(--select-blue);
 }
-.bl-tasks__new-task--complete + label {
+.bl-tasks__new-task--btn-complete {
   background-image: url(../assets/icons/bl-Check.svg);
 }
-.bl-tasks__new-task--complete:checked + label {
+.bl-tasks__new-task--btn-completed {
   background-image: url(../assets/icons/bl-Checked.svg);
 }
 .bl-tasks__new-task--name {
   color: var(--principal-blue);
 }
-.bl-tasks__new-task--menu > path {
+.bl-tasks__new-task--btn-remove--icon > path {
   fill: var(--principal-blue);
 }
 
@@ -301,15 +295,15 @@ a {
 .gr-tasks__new-task {
   background: var(--select-green);
 }
-.gr-tasks__new-task--complete + label {
+.gr-tasks__new-task--btn-complete {
   background-image: url(../assets/icons/gr-Check.svg);
 }
-.gr-tasks__new-task--complete:checked + label {
+.gr-tasks__new-task--btn-completed {
   background-image: url(../assets/icons/gr-Checked.svg);
 }
 .gr-tasks__new-task--name {
   color: var(--principal-green);
 }
-.gr-tasks__new-task--menu > path {
+.gr-tasks__new-task--btn-remove--icon > path {
   fill: var(--principal-green);
 }

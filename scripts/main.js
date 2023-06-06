@@ -17,10 +17,10 @@ const tasksHeaderIcon = document.querySelector(".tasks__header--icon");
 
 const tasksNewTask = document.querySelectorAll(".tasks__new-task");
 const tasksNewTaskComplete = document.querySelectorAll(
-  ".tasks__new-task--complete"
+  ".tasks__new-task--btn-complete"
 );
 const tasksNewTaskName = document.querySelectorAll(".tasks__new-task--name");
-const tasksNewTaskMen = document.querySelectorAll(".tasks__new-task--menu");
+const tasksNewTaskRemove = document.querySelectorAll(".tasks__new-task--btn-remove--icon");
 
 pomodoro.addEventListener("click", togglePomodoro);
 shortBreak.addEventListener("click", toggleShortBreak);
@@ -45,33 +45,33 @@ function togglePomodoro() {
     "gr-timer__controls--icon"
   );
   next.classList.remove("bl-timer__controls--icon", "gr-timer__controls--icon");
-  // tasks.classList.remove("bl-tasks", "gr-tasks");
-  // tasksHeaderIcon.classList.remove(
-  //   "bl-tasks__header--icon",
-  //   "gr-tasks__header--icon"
-  // );
+  tasks.classList.remove("bl-tasks", "gr-tasks");
+  tasksHeaderIcon.classList.remove(
+    "bl-tasks__header--icon",
+    "gr-tasks__header--icon"
+  );
 
-  // tasksNewTask.forEach((element) => {
-  //   element.classList.remove("bl-tasks__new-task", "gr-tasks__new-task");
-  // });
-  // tasksNewTaskComplete.forEach((element) => {
-  //   element.classList.remove(
-  //     "bl-tasks__new-task--complete",
-  //     "gr-tasks__new-task--complete"
-  //   );
-  // });
-  // tasksNewTaskName.forEach((element) => {
-  //   element.classList.remove(
-  //     "bl-tasks__new-task--name",
-  //     "gr-tasks__new-task--name"
-  //   );
-  // });
-  // tasksNewTaskMen.forEach((element) => {
-  //   element.classList.remove(
-  //     "bl-tasks__new-task--menu",
-  //     "gr-tasks__new-task--menu"
-  //   );
-  // });
+  tasksNewTask.forEach((element) => {
+    element.classList.remove("bl-tasks__new-task", "gr-tasks__new-task");
+  });
+  tasksNewTaskComplete.forEach((element) => {
+    element.classList.remove(
+      "bl-tasks__new-task--btn-complete",
+      "gr-tasks__new-task--btn-complete"
+    );
+  });
+  tasksNewTaskName.forEach((element) => {
+    element.classList.remove(
+      "bl-tasks__new-task--name",
+      "gr-tasks__new-task--name"
+    );
+  });
+  tasksNewTaskRemove.forEach((element) => {
+    element.classList.remove(
+      "bl-tasks__new-task--btn-remove--icon",
+      "gr-tasks__new-task--btn-remove--icon"
+    );
+  });
 
   minutes.textContent = 25;
   seconds.textContent = `0${0}`;
@@ -99,27 +99,27 @@ function toggleShortBreak() {
   pause.classList.remove("gr-timer__controls--icon");
   next.classList.add("bl-timer__controls--icon");
   next.classList.remove("gr-timer__controls--icon");
-  // tasks.classList.add("bl-tasks");
-  // tasks.classList.remove("gr-tasks");
-  // tasksHeaderIcon.classList.add("bl-tasks__header--icon");
-  // tasksHeaderIcon.classList.remove("gr-tasks__header--icon");
+  tasks.classList.add("bl-tasks");
+  tasks.classList.remove("gr-tasks");
+  tasksHeaderIcon.classList.add("bl-tasks__header--icon");
+  tasksHeaderIcon.classList.remove("gr-tasks__header--icon");
 
-  // tasksNewTask.forEach((element) => {
-  //   element.classList.add("bl-tasks__new-task");
-  //   element.classList.remove("gr-tasks__new-task");
-  // });
-  // tasksNewTaskComplete.forEach((element) => {
-  //   element.classList.add("bl-tasks__new-task--complete");
-  //   element.classList.remove("gr-tasks__new-task--complete");
-  // });
-  // tasksNewTaskName.forEach((element) => {
-  //   element.classList.add("bl-tasks__new-task--name");
-  //   element.classList.remove("gr-tasks__new-task--name");
-  // });
-  // tasksNewTaskMen.forEach((element) => {
-  //   element.classList.add("bl-tasks__new-task--menu");
-  //   element.classList.remove("gr-tasks__new-task--menu");
-  // });
+  tasksNewTask.forEach((element) => {
+    element.classList.add("bl-tasks__new-task");
+    element.classList.remove("gr-tasks__new-task");
+  });
+  tasksNewTaskComplete.forEach((element) => {
+    element.classList.add("bl-tasks__new-task--btn-complete");
+    element.classList.remove("gr-tasks__new-task--btn-complete");
+  });
+  tasksNewTaskName.forEach((element) => {
+    element.classList.add("bl-tasks__new-task--name");
+    element.classList.remove("gr-tasks__new-task--name");
+  });
+  tasksNewTaskRemove.forEach((element) => {
+    element.classList.add("bl-tasks__new-task--btn-remove--icon");
+    element.classList.remove("gr-tasks__new-task--btn-remove--icon");
+  });
 
   minutes.textContent = `0${5}`;
   seconds.textContent = `0${0}`;
@@ -147,27 +147,27 @@ function toggleLongBreak() {
   pause.classList.remove("bl-timer__controls--icon");
   next.classList.add("gr-timer__controls--icon");
   next.classList.remove("bl-timer__controls--icon");
-  // tasks.classList.add("gr-tasks");
-  // tasks.classList.remove("bl-tasks");
-  // tasksHeaderIcon.classList.add("gr-tasks__header--icon");
-  // tasksHeaderIcon.classList.remove("bl-tasks__header--icon");
+  tasks.classList.add("gr-tasks");
+  tasks.classList.remove("bl-tasks");
+  tasksHeaderIcon.classList.add("gr-tasks__header--icon");
+  tasksHeaderIcon.classList.remove("bl-tasks__header--icon");
 
-  // tasksNewTask.forEach((element) => {
-  //   element.classList.add("gr-tasks__new-task");
-  //   element.classList.remove("bl-tasks__new-task");
-  // });
-  // tasksNewTaskComplete.forEach((element) => {
-  //   element.classList.add("gr-tasks__new-task--complete");
-  //   element.classList.remove("bl-tasks__new-task--complete");
-  // });
-  // tasksNewTaskName.forEach((element) => {
-  //   element.classList.add("gr-tasks__new-task--name");
-  //   element.classList.remove("bl-tasks__new-task--name");
-  // });
-  // tasksNewTaskMen.forEach((element) => {
-  //   element.classList.add("gr-tasks__new-task--menu");
-  //   element.classList.remove("bl-tasks__new-task--menu");
-  // });
+  tasksNewTask.forEach((element) => {
+    element.classList.add("gr-tasks__new-task");
+    element.classList.remove("bl-tasks__new-task");
+  });
+  tasksNewTaskComplete.forEach((element) => {
+    element.classList.add("gr-tasks__new-task--btn-complete");
+    element.classList.remove("bl-tasks__new-task--btn-complete");
+  });
+  tasksNewTaskName.forEach((element) => {
+    element.classList.add("gr-tasks__new-task--name");
+    element.classList.remove("bl-tasks__new-task--name");
+  });
+  tasksNewTaskRemove.forEach((element) => {
+    element.classList.add("gr-tasks__new-task--btn-remove--icon");
+    element.classList.remove("bl-tasks__new-task--btn-remove--icon");
+  });
 
 
   minutes.textContent = 15;
