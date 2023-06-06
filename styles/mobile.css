@@ -158,7 +158,8 @@ a {
   font-weight: 500;
 }
 #add-task {
-  display: none;
+  background: none;
+  border: none;
 }
 .tasks__header--icon {
   cursor: pointer;
