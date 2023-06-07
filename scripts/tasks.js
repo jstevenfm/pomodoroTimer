@@ -55,8 +55,9 @@ function createTaskNode() {
     const containerInputsTask = document.createElement("div");
     containerInputsTask.setAttribute("class", "tasks__new-task--inputs");
 
-      const btnCheckTasks = document.createElement("button");
+      const btnCheckTasks = document.createElement("input");
       btnCheckTasks.setAttribute("class", "tasks__new-task--btn-complete");
+      btnCheckTasks.setAttribute("type", "checkbox");
 
       const inputNameTasks = document.createElement("input");
       inputNameTasks.setAttribute("class", "tasks__new-task--name");
