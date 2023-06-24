@@ -313,3 +313,7 @@ a {
 .gr-tasks__new-task--btn-remove--icon > path {
   fill: var(--principal-green);
 }
+
+.task-name-competed {
+  text-decoration: line-through;
+}

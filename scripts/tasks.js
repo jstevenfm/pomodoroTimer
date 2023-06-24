@@ -32,15 +32,31 @@ btnAddTasks.addEventListener('click', addTask)
 
 function addTask() {
   const taskNode = createTaskNode();
-  const containerTasks = document.querySelector(".tasks");
+  const containerTasks = document.querySelector(".tasks-ul");
   containerTasks.appendChild(taskNode);
 
   const btnRemoveTask = taskNode.querySelector(".tasks__new-task--btn-remove");
   btnRemoveTask.addEventListener('click', removeTask);
 
-  // const btnCompleteTask = taskNode.querySelector(".tasks__new-task--btn-complete");
-  // btnCompleteTask.addEventListener('click', completeTask);
+  const btnCompleteTask = taskNode.querySelector(".tasks__new-task--btn-complete");
+  btnCompleteTask.addEventListener('click', completeTask);
 
+}
+
+function completeTask() {
+  const taskNode = this.parentNode.parentNode;
+  const containerTasks = document.querySelector(".tasks-ul");
+  const checked = this.parentNode.querySelector(".tasks__new-task--btn-complete");
+  const nameTask = this.parentNode.querySelector(".tasks__new-task--name");
+  nameTask.classList.toggle("task-name-competed")
+
+  if (checked.checked === true) {
+      nameTask.classList.add("task-name-competed")
+      containerTasks.appendChild(taskNode);
+    } else if (checked.checked === false) {
+      nameTask.classList.remove("task-name-competed")
+      containerTasks.insertBefore(taskNode, containerTasks.firstChild);
+    }
 }
 
 function removeTask() {
