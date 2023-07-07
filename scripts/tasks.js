@@ -9,8 +9,6 @@ function saveStorageTasks() {
 function restoreTasks() {
   for (const taskData of storedTasks) {
     const taskNode = createTaskNode();
-    // Restaura la información de la tarea en el nodo de tarea
-    // (suponiendo que existe una función createTaskNodeWithData() para este propósito)
     createTaskNodeWithData(taskNode, taskData);
     containerTasks.appendChild(taskNode);
 
