@@ -1,3 +1,30 @@
+
+
+const storedTasks = JSON.parse(localStorage.getItem("containerTasks")) || [];
+
+function saveStorageTasks() {
+  localStorage.setItem("containerTasks", JSON.stringify(storedTasks));
+}
+
+function restoreTasks() {
+  for (const taskData of storedTasks) {
+    const taskNode = createTaskNode();
+    // Restaura la información de la tarea en el nodo de tarea
+    // (suponiendo que existe una función createTaskNodeWithData() para este propósito)
+    createTaskNodeWithData(taskNode, taskData);
+    containerTasks.appendChild(taskNode);
+
+    const btnRemoveTask = taskNode.querySelector(".tasks__new-task--btn-remove");
+    btnRemoveTask.addEventListener("click", removeTask);
+
+    const btnCompleteTask = taskNode.querySelector(".tasks__new-task--btn-complete");
+    btnCompleteTask.addEventListener("click", completeTask);
+  }
+}
+
+window.addEventListener("load", restoreTasks);
+
+
 const btnAddTasks = document.querySelector("#add-task");
 btnAddTasks.addEventListener('click', addTask)
 
@@ -12,6 +39,8 @@ function addTask() {
 
   const btnCompleteTask = taskNode.querySelector(".tasks__new-task--btn-complete");
   btnCompleteTask.addEventListener('click', completeTask);
+
+  saveStorageTasks();
 
 }
 
@@ -29,11 +58,17 @@ function completeTask() {
       nameTask.classList.remove("task-name-competed")
       containerTasks.insertBefore(taskNode, containerTasks.firstChild);
     }
+
+    saveStorageTasks();
+
 }
 
 function removeTask() {
   const taskNode = this.parentNode;
   taskNode.remove();
+
+  saveStorageTasks();
+
 }
 
 function createTaskNode() {
@@ -71,5 +106,8 @@ function createTaskNode() {
 
   containerNewTask.appendChild(containerInputsTask);
   containerNewTask.appendChild(btnRemoveTask);
+  saveStorageTasks();
+
   return containerNewTask;
 }
+
