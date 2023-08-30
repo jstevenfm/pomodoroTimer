@@ -1,0 +1,34 @@
+{
+  "name": "pomodorotimer",
+  "version": "1.0.0",
+  "description": "Pomodoro Timer with task to-do",
+  "main": "./scripts/main.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "deploy": "npm run format && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jstevenfm/pomodoroTimer.git"
+  },
+  "keywords": [
+    "pomodoro",
+    "timer",
+    "tasks",
+    "todo",
+    "javascript",
+    "js",
+    "html",
+    "css"
+  ],
+  "author": "Jeisson Fonseca <jstevenfm@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jstevenfm/pomodoroTimer/issues"
+  },
+  "homepage": "https://github.com/jstevenfm/pomodoroTimer#readme",
+  "dev-dependencies": {
+    "snowpack": "^3.2.2"
+  }
+}
