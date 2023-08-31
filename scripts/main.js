@@ -222,6 +222,13 @@ const playCount = () => {
       }
       if (Number(minutes.textContent) < 0) {
         restartState();
+        const playSound = () => {
+          const soundBell = new Audio('../assets/sounds/ac-bel-105874.mp3');
+          soundBell.duration = 1;
+          soundBell.play();
+          console.log(soundBell.duration);
+        }
+        playSound();
         if (pomodoro.checked === true) {
           counterPomodoro++;
         }
