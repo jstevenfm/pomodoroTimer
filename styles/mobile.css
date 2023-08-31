@@ -39,6 +39,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+button {
+  border: none;
+  background: none;
+}
 
 .navbar {
   display: flex;
@@ -130,7 +134,7 @@ a {
 .timer__controls--icon {
   cursor: pointer;
 }
-.timer__controls--icon > path {
+.timer__controls--icon > svg > path {
   fill: var(--principal-yellow);
 }
 
@@ -243,7 +247,7 @@ a {
 .bl-timer__controls {
   background: var(--container-blue);
 }
-.bl-timer__controls--icon > path {
+.bl-timer__controls--icon > svg > path {
   fill: var(--principal-blue);
 }
 
@@ -288,7 +292,7 @@ a {
 .gr-timer__controls {
   background: var(--container-green);
 }
-.gr-timer__controls--icon > path {
+.gr-timer__controls--icon > svg > path {
   fill: var(--principal-green);
 }
 
