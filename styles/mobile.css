@@ -104,6 +104,14 @@ button:hover {
   cursor: pointer;
   text-align: center;
 }
+.timer__status > input:hover + label {
+  background: linear-gradient(0deg, rgba(68, 71, 70, 0.08), rgba(68, 71, 70, 0.08));
+  border-radius: 2.4rem;
+  -webkit-border-radius: 2.4rem;
+  -moz-border-radius: 2.4rem;
+  -ms-border-radius: 2.4rem;
+  -o-border-radius: 2.4rem;
+}
 .timer__status > input:checked  + label {
   background: var(--select-yellow);
   border-radius: 2.4rem;
@@ -116,14 +124,6 @@ button:hover {
   -moz-transition: all 0.25s ease-in;
   -ms-transition: all 0.25s ease-in;
   -o-transition: all 0.25s ease-in;
-}
-.timer__status > input:hover + label {
-  background: linear-gradient(0deg, rgba(68, 71, 70, 0.08), rgba(68, 71, 70, 0.08));
-  border-radius: 2.4rem;
-  -webkit-border-radius: 2.4rem;
-  -moz-border-radius: 2.4rem;
-  -ms-border-radius: 2.4rem;
-  -o-border-radius: 2.4rem;
 }
 
 .timer__counter {

@@ -28,7 +28,7 @@
     "url": "https://github.com/jstevenfm/pomodoroTimer/issues"
   },
   "homepage": "https://github.com/jstevenfm/pomodoroTimer#readme",
-  "dev-dependencies": {
+  "devDependencies": {
     "snowpack": "^3.2.2"
   }
 }
