@@ -118,7 +118,7 @@ button:hover {
   -o-transition: all 0.25s ease-in;
 }
 .timer__status > input:hover + label {
-  background: #e0e0e0ad;
+  background: linear-gradient(0deg, rgba(68, 71, 70, 0.08), rgba(68, 71, 70, 0.08));
   border-radius: 2.4rem;
   -webkit-border-radius: 2.4rem;
   -moz-border-radius: 2.4rem;
