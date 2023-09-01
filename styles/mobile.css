@@ -42,6 +42,15 @@ a {
 button {
   border: none;
   background: none;
+  cursor: pointer;
+}
+button:hover {
+  scale: 1.2;
+  transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
 }
 
 .navbar {
@@ -102,11 +111,19 @@ button {
   -moz-border-radius: 2.4rem;
   -ms-border-radius: 2.4rem;
   -o-border-radius: 2.4rem;
-  transition: all 0.25s linear;
-  -webkit-transition: all 0.25s linear;
-  -moz-transition: all 0.25s linear;
-  -ms-transition: all 0.25s linear;
-  -o-transition: all 0.25s linear;
+  transition: all 0.25s ease-in;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -ms-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+}
+.timer__status > input:hover + label {
+  background: #e0e0e0ad;
+  border-radius: 2.4rem;
+  -webkit-border-radius: 2.4rem;
+  -moz-border-radius: 2.4rem;
+  -ms-border-radius: 2.4rem;
+  -o-border-radius: 2.4rem;
 }
 
 .timer__counter {
